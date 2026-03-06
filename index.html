@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vineesh P - UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">vineesh<span class="accent">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#work" class="mobile-link">Work</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-badge" data-animate="fade-up">
+                <span class="badge-dot"></span>
+                Open to work
+            </div>
+            <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                Crafting Digital<br>
+                <span class="hero-title-outline">Experiences</span> That<br>
+                <span class="accent">Resonate</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                UX Designer with 3+ years of experience crafting intuitive user
+                experiences for web and mobile applications, with expertise in
+                user research, prototyping, and usability testing.
+            </p>
+            <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span><span class="accent">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span><span class="accent">+</span>
+                    <span class="stat-label">Products Designed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="4">0</span><span class="accent">+</span>
+                    <span class="stat-label">Healthcare Apps</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>User Research</span>
+                <span class="marquee-dot"></span>
+                <span>Product Thinking</span>
+                <span class="marquee-dot"></span>
+                <span>Prototyping</span>
+                <span class="marquee-dot"></span>
+                <span>Usability Testing</span>
+                <span class="marquee-dot"></span>
+                <span>Wireframing</span>
+                <span class="marquee-dot"></span>
+                <span>Visual Design</span>
+                <span class="marquee-dot"></span>
+                <span>Responsive Design</span>
+                <span class="marquee-dot"></span>
+                <span>Accessibility</span>
+                <span class="marquee-dot"></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>User Research</span>
+                <span class="marquee-dot"></span>
+                <span>Product Thinking</span>
+                <span class="marquee-dot"></span>
+                <span>Prototyping</span>
+                <span class="marquee-dot"></span>
+                <span>Usability Testing</span>
+                <span class="marquee-dot"></span>
+                <span>Wireframing</span>
+                <span class="marquee-dot"></span>
+                <span>Visual Design</span>
+                <span class="marquee-dot"></span>
+                <span>Responsive Design</span>
+                <span class="marquee-dot"></span>
+                <span>Accessibility</span>
+                <span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-label" data-animate="fade-up">
+                <span class="label-line"></span>
+                About Me
+            </div>
+            <div class="about-grid">
+                <div class="about-left" data-animate="fade-up" data-delay="100">
+                    <h2 class="section-title">
+                        I design products that people
+                        <span class="accent">love</span> to use
+                    </h2>
+                </div>
+                <div class="about-right" data-animate="fade-up" data-delay="200">
+                    <p class="about-text">
+                        I'm Vineesh P, a UX Designer with 3+ years of experience crafting
+                        intuitive user experiences for both web and mobile applications.
+                        Proficient in user research, wireframing, prototyping, and usability
+                        testing, with expertise in tools such as Figma.
+                    </p>
+                    <p class="about-text">
+                        Skilled in responsive design, adhering to accessibility standards,
+                        and creating designs that prioritize usability across devices. Adept
+                        at collaborating with cross-functional teams, including developers,
+                        product managers, and QA, to deliver seamless and engaging user
+                        experiences that align with business goals.
+                    </p>
+                    <div class="about-tools">
+                        <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Framer</span>
+                        <span class="tool-tag">Protopie</span>
+                        <span class="tool-tag">Adobe Photoshop</span>
+                        <span class="tool-tag">Adobe Illustrator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-container">
+            <div class="section-label" data-animate="fade-up">
+                <span class="label-line"></span>
+                What I Do
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">UI Design</h3>
+                    <p class="service-desc">Creating visually stunning interfaces with modern design principles, consistent design systems, and pixel-perfect execution.</p>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">UX Research</h3>
+                    <p class="service-desc">Understanding user needs through research, interviews, and usability testing to inform design decisions that matter.</p>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Prototyping</h3>
+                    <p class="service-desc">Building interactive prototypes that bring ideas to life, enabling rapid iteration and stakeholder alignment.</p>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Design Systems</h3>
+                    <p class="service-desc">Developing scalable design systems and component libraries that ensure consistency across products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="section-container">
+            <div class="section-label" data-animate="fade-up">
+                <span class="label-line"></span>
+                Selected Work
+            </div>
+            <h2 class="section-title" data-animate="fade-up" data-delay="100">
+                Featured <span class="accent">Projects</span>
+            </h2>
+
+            <div class="projects-grid">
+                <div class="project-card project-card-large" data-animate="fade-up" data-delay="150">
+                    <div class="project-image" style="background: linear-gradient(135deg, #d0ff71 0%, #5e67e6 100%);">
+                        <div class="project-image-inner">
+                            <span class="project-placeholder-text">Atlas Mobile</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>UX Design</span>
+                            <span>Mobile App</span>
+                        </div>
+                        <h3 class="project-title">Atlas Mobile - ECG Diagnostics</h3>
+                        <p class="project-desc">A mobile app for doctors to interpret and diagnose ECGs with AI-powered suggestions, comprehensive interpretation tools, and an intuitive workflow.</p>
+                        <a href="#" class="project-link">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="200">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f46c38 0%, #ff9a76 100%);">
+                        <div class="project-image-inner">
+                            <span class="project-placeholder-text">VCardia</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>UI/UX Design</span>
+                            <span>Mobile + SDK</span>
+                        </div>
+                        <h3 class="project-title">VCardia Mobile & SDK</h3>
+                        <p class="project-desc">A mobile app integrated with a portable 12-lead ECG device, enabling real-time ECG acquisition, cloud upload, and report retrieval.</p>
+                        <a href="#" class="project-link">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="250">
+                    <div class="project-image" style="background: linear-gradient(135deg, #5e67e6 0%, #a78bfa 100%);">
+                        <div class="project-image-inner">
+                            <span class="project-placeholder-text">ECG Terminal</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>UX Design</span>
+                            <span>Web Platform</span>
+                        </div>
+                        <h3 class="project-title">ECG Analysis Terminal</h3>
+                        <p class="project-desc">A web platform enabling doctors to diagnose ECGs within seconds, featuring algorithmic suggestions and serial ECG comparisons.</p>
+                        <a href="#" class="project-link">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card project-card-large" data-animate="fade-up" data-delay="300">
+                    <div class="project-image" style="background: linear-gradient(135deg, #303030 0%, #5e67e6 50%, #d0ff71 100%);">
+                        <div class="project-image-inner">
+                            <span class="project-placeholder-text">One Mobile</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>UI/UX Design</span>
+                            <span>Mobile App</span>
+                        </div>
+                        <h3 class="project-title">One Mobile - Unified Healthcare Platform</h3>
+                        <p class="project-desc">A master application integrating ECG acquisition, criticality-based tagging, and collaborative case management in a hub-and-spoke hospital model.</p>
+                        <a href="#" class="project-link">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <div class="section-label" data-animate="fade-up">
+                <span class="label-line"></span>
+                Experience
+            </div>
+            <h2 class="section-title" data-animate="fade-up" data-delay="100">
+                Where I've <span class="accent">Worked</span>
+            </h2>
+
+            <div class="experience-list">
+                <div class="experience-item" data-animate="fade-up" data-delay="150">
+                    <div class="exp-left">
+                        <span class="exp-period">Jan 2025 - Present</span>
+                    </div>
+                    <div class="exp-right">
+                        <h3 class="exp-role">UX Designer</h3>
+                        <span class="exp-company">Tricog Health, Bangalore</span>
+                        <p class="exp-desc">Leading UX design for healthcare products, crafting intuitive experiences for web and mobile applications with a focus on human-computer interaction and user interface design.</p>
+                    </div>
+                </div>
+                <div class="experience-item" data-animate="fade-up" data-delay="200">
+                    <div class="exp-left">
+                        <span class="exp-period">Jan 2024 - Jan 2025</span>
+                    </div>
+                    <div class="exp-right">
+                        <h3 class="exp-role">Associate UI/UX Designer</h3>
+                        <span class="exp-company">Tricog Health, Bangalore</span>
+                        <p class="exp-desc">Designed UI/UX for healthcare products including Atlas Mobile, VCardia, ECG Analysis Terminal, and One Mobile — enabling doctors to diagnose ECGs efficiently with AI-powered tools.</p>
+                    </div>
+                </div>
+                <div class="experience-item" data-animate="fade-up" data-delay="250">
+                    <div class="exp-left">
+                        <span class="exp-period">Feb 2023 - Jan 2024</span>
+                    </div>
+                    <div class="exp-right">
+                        <h3 class="exp-role">Junior UI/UX Designer</h3>
+                        <span class="exp-company">Tricog Health, Bangalore</span>
+                        <p class="exp-desc">Designed user interfaces for web and mobile applications, conducted user research, and created interactive prototypes for healthcare diagnostic platforms.</p>
+                    </div>
+                </div>
+                <div class="experience-item" data-animate="fade-up" data-delay="300">
+                    <div class="exp-left">
+                        <span class="exp-period">Nov 2022 - Feb 2023</span>
+                    </div>
+                    <div class="exp-right">
+                        <h3 class="exp-role">UI/UX Designer - Intern</h3>
+                        <span class="exp-company">Tricog Health, Bangalore</span>
+                        <p class="exp-desc">Designed the National STEMI Registry, a Government-sponsored SaaS platform for managing STEMI patients across four states in India with ECG documentation and medical tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-content">
+                <div class="section-label" data-animate="fade-up">
+                    <span class="label-line"></span>
+                    Get In Touch
+                </div>
+                <h2 class="contact-title" data-animate="fade-up" data-delay="100">
+                    Let's create something<br><span class="accent">amazing</span> together
+                </h2>
+                <p class="contact-desc" data-animate="fade-up" data-delay="150">
+                    I'm currently looking for new opportunities.
+                    If you think I'd be a great fit for your team, let's connect.
+                </p>
+                <a href="mailto:vineeshvasu2001@gmail.com" class="contact-email" data-animate="fade-up" data-delay="200">
+                    vineeshvasu2001@gmail.com
+                </a>
+                <div class="social-links" data-animate="fade-up" data-delay="250">
+                    <a href="#" class="social-link" aria-label="Behance">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7.5 11C9.43 11 11 9.43 11 7.5S9.43 4 7.5 4H2v7h5.5zm0 2H2v7h5.5C9.43 20 11 18.43 11 16.5S9.43 13 7.5 13zM15 6h6v1.5h-6V6zm3 4c-2.49 0-4.5 2.01-4.5 4.5S15.51 19 18 19c1.85 0 3.45-1.12 4.13-2.72h-2.1c-.47.68-1.22 1.12-2.03 1.12-1.38 0-2.5-1.12-2.5-2.5h6.75c.08-.32.12-.65.12-1 0-2.21-1.64-3.9-4.37-3.9zm-2.4 3.5c.26-1.19 1.27-2 2.4-2s2.14.81 2.4 2H15.6z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Dribbble">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6.02 9.92 8.07 17.66"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vineesh-vasu-6585061ba/" class="social-link" aria-label="LinkedIn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">vineesh<span class="accent">.</span></span>
+                <p class="footer-copy">&copy; 2026 Vineesh P. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#home" class="footer-link">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
