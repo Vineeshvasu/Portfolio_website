@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Terminal – Case Study | Vineesh P</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <nav class="cs-nav" id="csNav">
+        <a href="index.html#work" class="cs-back">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+            Go Back
+        </a>
+        <a href="index.html" class="cs-nav-logo">vineesh<span class="accent">.</span></a>
+        <div class="cs-nav-right">
+            <button class="theme-toggle-cs" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+        <div class="cs-hero-bg" style="background: linear-gradient(135deg, #080510 0%, #0d0a1a 40%, #1a0d3a 70%, #0a0814 100%);"></div>
+        <div class="cs-hero-overlay"></div>
+        <div class="cs-hero-content">
+            <div class="cs-tags">
+                <span class="cs-tag">UX Design</span>
+                <span class="cs-tag">Web Platform</span>
+                <span class="cs-tag">Clinical Tool</span>
+            </div>
+            <h1 class="cs-hero-title">ECG Analysis<br>Terminal</h1>
+            <p class="cs-hero-desc">A web platform enabling doctors to diagnose ECGs within seconds — featuring AI algorithmic suggestions and serial ECG comparison side by side.</p>
+        </div>
+    </section>
+
+    <!-- Hero Mockup — Browser -->
+    <div class="cs-hero-mockup" style="background: #0a0812; align-items: center;">
+        <div class="browser-mockup" style="max-width: 960px;">
+            <div class="browser-bar">
+                <div class="browser-dots">
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                </div>
+                <div class="browser-url">app.ecgterminal.com/analyze</div>
+            </div>
+            <!-- App UI -->
+            <div style="display:grid; grid-template-columns:220px 1fr 240px; height:420px; background:#0d0b1a;">
+                <!-- Left sidebar - patient list -->
+                <div style="border-right:1px solid rgba(167,139,250,0.12); padding:16px; display:flex; flex-direction:column; gap:6px; overflow:hidden;">
+                    <div style="font-size:9px; color:rgba(255,255,255,0.35); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; font-family:var(--font-body);">Patient Queue</div>
+                    <div style="background:rgba(167,139,250,0.08); border:1px solid rgba(167,139,250,0.2); border-radius:8px; padding:10px;">
+                        <div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body); margin-bottom:3px;">R. Sharma, 62M</div>
+                        <div style="font-size:8px; color:#a78bfa; font-family:var(--font-body); margin-bottom:6px;">Inferior STEMI · P1</div>
+                        <svg viewBox="0 0 100 18" style="width:100%; height:12px;" preserveAspectRatio="none"><polyline points="0,9 12,9 14,3 16,15 18,9 32,9 34,2 36,16 38,9 52,9 54,3 56,15 58,9 72,9 74,2 76,16 78,9 90,9 92,5 94,13 96,9 100,9" fill="none" stroke="#a78bfa" stroke-width="1.2"/></svg>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px;">
+                        <div style="font-size:9px; font-weight:600; color:rgba(255,255,255,0.6); font-family:var(--font-body); margin-bottom:3px;">A. Nair, 45F</div>
+                        <div style="font-size:8px; color:rgba(255,165,0,0.7); font-family:var(--font-body); margin-bottom:6px;">AFib · P2</div>
+                        <svg viewBox="0 0 100 18" style="width:100%; height:12px;" preserveAspectRatio="none"><polyline points="0,9 5,14 8,4 11,14 14,9 18,7 22,11 26,7 30,11 34,9 38,7 42,11 46,7 50,11 54,9 58,7 62,11 66,7 70,11 74,9 80,9 82,6 84,12 86,9 100,9" fill="none" stroke="rgba(255,165,0,0.6)" stroke-width="1.2"/></svg>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px;">
+                        <div style="font-size:9px; font-weight:600; color:rgba(255,255,255,0.6); font-family:var(--font-body); margin-bottom:3px;">K. Patel, 58M</div>
+                        <div style="font-size:8px; color:rgba(40,200,100,0.7); font-family:var(--font-body); margin-bottom:6px;">Normal Sinus · P3</div>
+                        <svg viewBox="0 0 100 18" style="width:100%; height:12px;" preserveAspectRatio="none"><polyline points="0,9 20,9 22,5 24,13 26,9 46,9 48,3 50,15 52,9 70,9 72,6 74,12 76,9 100,9" fill="none" stroke="rgba(40,200,100,0.5)" stroke-width="1.2"/></svg>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.02); border-radius:8px; padding:10px; opacity:0.5;">
+                        <div style="font-size:9px; font-weight:600; color:rgba(255,255,255,0.4); font-family:var(--font-body); margin-bottom:3px;">P. Menon, 71M</div>
+                        <div style="font-size:8px; color:rgba(255,255,255,0.25); font-family:var(--font-body);">Pending review</div>
+                    </div>
+                </div>
+                <!-- Center - main ECG viewer -->
+                <div style="padding:16px; display:flex; flex-direction:column;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <div>
+                            <div style="font-size:11px; font-weight:600; color:#fff; font-family:var(--font-body);">R. Sharma · 62M · MRN 104289</div>
+                            <div style="font-size:9px; color:rgba(255,255,255,0.35); font-family:var(--font-body);">Recorded 14:32 · 12-Lead Standard</div>
+                        </div>
+                        <div style="display:flex; gap:6px;">
+                            <div style="padding:5px 12px; background:rgba(167,139,250,0.1); border:1px solid rgba(167,139,250,0.25); border-radius:6px; font-size:8px; color:#a78bfa; font-family:var(--font-body);">25 mm/s</div>
+                            <div style="padding:5px 12px; background:rgba(255,255,255,0.05); border-radius:6px; font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">10 mm/mV</div>
+                        </div>
+                    </div>
+                    <!-- ECG leads grid -->
+                    <div style="flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr 1fr 1fr; gap:2px; background:#0d0b1a;">
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:2px;">I</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 12,11 14,4 16,18 18,11 32,11 34,3 36,19 38,11 52,11 54,4 56,18 58,11 72,11 74,5 76,17 78,11 80,11" fill="none" stroke="#a78bfa" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:2px;">II</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 10,11 12,2 14,20 16,11 30,11 32,2 34,20 36,11 50,11 52,2 54,20 56,11 70,11 72,2 74,20 76,11 80,11" fill="none" stroke="#a78bfa" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:2px;">III</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 15,11 17,6 19,16 21,11 35,11 37,5 39,17 41,11 55,11 57,6 59,16 61,11 75,11 77,7 79,15 80,11" fill="none" stroke="rgba(167,139,250,0.65)" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:rgba(167,139,250,0.5); font-family:monospace; margin-bottom:2px;">aVR</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 12,11 14,17 16,5 18,11 32,11 34,18 36,4 38,11 52,11 54,17 56,5 58,11 72,11 74,18 76,4 78,11 80,11" fill="none" stroke="rgba(167,139,250,0.5)" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:rgba(167,139,250,0.5); font-family:monospace; margin-bottom:2px;">aVL</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 15,11 17,7 19,15 21,11 35,11 37,6 39,16 41,11 55,11 57,7 59,15 61,11 75,11 77,8 79,14 80,11" fill="none" stroke="rgba(167,139,250,0.5)" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:rgba(167,139,250,0.5); font-family:monospace; margin-bottom:2px;">aVF</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 10,11 12,1 14,21 16,11 30,11 32,1 34,21 36,11 50,11 52,1 54,21 56,11 70,11 72,2 74,20 76,11 80,11" fill="none" stroke="rgba(167,139,250,0.5)" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px;">
+                            <div style="font-size:7px; color:rgba(167,139,250,0.4); font-family:monospace; margin-bottom:2px;">V1</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 12,11 14,16 16,6 18,11 32,11 34,17 36,5 38,11 52,11 54,16 56,6 58,11 72,11 74,17 76,5 78,11 80,11" fill="none" stroke="rgba(167,139,250,0.4)" stroke-width="1.3"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px; position:relative; overflow:hidden;">
+                            <div style="position:absolute; inset:0; background:rgba(255,80,80,0.04); border:1px solid rgba(255,80,80,0.2);"></div>
+                            <div style="font-size:7px; color:#ff8080; font-family:monospace; margin-bottom:2px; position:relative;">V4 ↑</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px; position:relative;" preserveAspectRatio="none"><polyline points="0,14 10,14 12,14 14,3 16,20 18,14 32,14 34,3 36,21 38,14 52,14 54,3 56,21 58,14 72,14 74,4 76,20 78,14 80,14" fill="none" stroke="#ff8080" stroke-width="1.5"/></svg>
+                        </div>
+                        <div style="background:#09071a; padding:6px 8px; position:relative; overflow:hidden;">
+                            <div style="position:absolute; inset:0; background:rgba(255,80,80,0.03); border:1px solid rgba(255,80,80,0.15);"></div>
+                            <div style="font-size:7px; color:rgba(255,128,128,0.8); font-family:monospace; margin-bottom:2px; position:relative;">V5 ↑</div>
+                            <svg viewBox="0 0 80 22" style="width:100%; height:18px; position:relative;" preserveAspectRatio="none"><polyline points="0,13 10,13 12,3 14,21 16,13 30,13 32,3 34,21 36,13 50,13 52,3 54,21 56,13 70,13 72,4 74,20 76,13 80,13" fill="none" stroke="rgba(255,128,128,0.7)" stroke-width="1.5"/></svg>
+                        </div>
+                        <div style="background:#09071a; grid-column:1/-1; padding:6px 8px;">
+                            <div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:2px;">II — Long Strip</div>
+                            <svg viewBox="0 0 240 18" style="width:100%; height:14px;" preserveAspectRatio="none"><polyline points="0,9 8,9 10,2 12,16 14,9 30,9 32,2 34,16 36,9 52,9 54,2 56,16 58,9 74,9 76,2 78,16 80,9 96,9 98,2 100,16 102,9 118,9 120,2 122,16 124,9 140,9 142,2 144,16 146,9 162,9 164,2 166,16 168,9 184,9 186,2 188,16 190,9 206,9 208,2 210,16 212,9 228,9 230,2 232,16 234,9 240,9" fill="none" stroke="#a78bfa" stroke-width="1.2"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right panel - AI suggestions -->
+                <div style="border-left:1px solid rgba(167,139,250,0.12); padding:16px; display:flex; flex-direction:column; gap:10px; overflow:hidden;">
+                    <div style="font-size:9px; color:rgba(255,255,255,0.35); letter-spacing:0.1em; text-transform:uppercase; font-family:var(--font-body);">Algorithm Analysis</div>
+                    <div style="background:rgba(255,80,80,0.07); border:1px solid rgba(255,80,80,0.2); border-radius:8px; padding:10px;">
+                        <div style="font-size:8px; font-weight:700; color:#ff8080; font-family:var(--font-body); margin-bottom:5px;">STEMI — INFERIOR</div>
+                        <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body); line-height:1.5;">ST elevation ≥1mm in II, III, aVF. Reciprocal depression in I, aVL.</div>
+                    </div>
+                    <div style="background:rgba(255,165,0,0.06); border:1px solid rgba(255,165,0,0.18); border-radius:8px; padding:10px;">
+                        <div style="font-size:8px; font-weight:700; color:#ffa500; font-family:var(--font-body); margin-bottom:5px;">Sinus Tachycardia</div>
+                        <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body); line-height:1.5;">Rate: 98 bpm. Regular rhythm. P:QRS 1:1.</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:10px;">
+                        <div style="font-size:8px; font-weight:600; color:rgba(255,255,255,0.6); font-family:var(--font-body); margin-bottom:5px;">QRS Morphology</div>
+                        <div style="font-size:8px; color:rgba(255,255,255,0.35); font-family:var(--font-body); line-height:1.5;">Normal duration 88ms. No bundle branch block.</div>
+                    </div>
+                    <div style="margin-top:auto; display:flex; flex-direction:column; gap:6px;">
+                        <div style="background:#a78bfa; border-radius:6px; padding:7px; text-align:center; font-size:8px; font-weight:700; color:#fff; font-family:var(--font-body);">Confirm Diagnosis</div>
+                        <div style="background:rgba(255,255,255,0.05); border-radius:6px; padding:7px; text-align:center; font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Compare Serial ECG</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meta -->
+    <div class="cs-meta">
+        <div class="cs-meta-inner">
+            <div class="cs-meta-item"><span class="cs-meta-label">Role</span><span class="cs-meta-value">UX Designer</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Duration</span><span class="cs-meta-value">5 Months</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Platform</span><span class="cs-meta-value">Web Platform</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Tools</span><span class="cs-meta-value">Figma · Hotjar · Notion</span></div>
+        </div>
+    </div>
+
+    <!-- Challenge -->
+    <div class="cs-container">
+        <section class="cs-section">
+            <div class="cs-two-col">
+                <div>
+                    <div class="cs-label">The Challenge</div>
+                    <h2 class="cs-title">Seconds Matter on the Web</h2>
+                </div>
+                <div>
+                    <p class="cs-body">Hospital networks needed a desktop-grade clinical platform for ECG analysis — one where doctors could interpret multiple leads simultaneously, cross-reference past recordings, and act on AI suggestions without losing their train of thought. Existing tools buried key information in menus, lacked real algorithm suggestions, and made serial comparisons nearly impossible. The ECG Analysis Terminal needed to surface the right information at the right moment in a single, distraction-free workspace.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="cs-section">
+            <div class="cs-label">Design Process</div>
+            <h2 class="cs-title">Designing the Workspace</h2>
+            <div class="cs-process">
+                <div class="cs-step">
+                    <div class="cs-step-num">01</div>
+                    <div class="cs-step-title">Research</div>
+                    <div class="cs-step-body">Heuristic evaluation of 5 existing ECG platforms. 3-week diary study with cardiologists to understand real web workflows and context switching.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">02</div>
+                    <div class="cs-step-title">Information Architecture</div>
+                    <div class="cs-step-body">Defined a 3-panel layout: queue, viewer, and analysis. Card sorting with doctors confirmed the mental model and panel hierarchy.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">03</div>
+                    <div class="cs-step-title">Design</div>
+                    <div class="cs-step-body">Designed 40+ screens across 12 flows. Iterated on typography scale for legibility at clinical monitor distances (60–90 cm).</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">04</div>
+                    <div class="cs-step-title">Validate</div>
+                    <div class="cs-step-body">Deployed Hotjar recordings on beta. Identified heat patterns showing doctors weren't seeing the serial comparison CTA — repositioned and retested.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="cs-section">
+            <div class="cs-label">Key Features</div>
+            <h2 class="cs-title">The Solution</h2>
+            <div class="cs-features">
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: #09071a;">
+                        <div style="padding:16px; width:100%;">
+                            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px;">
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:3px;">I</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,9 8,9 10,3 12,15 14,9 24,9 26,3 28,15 30,9 40,9 42,3 44,15 46,9 56,9 58,5 60,13" fill="none" stroke="#a78bfa" stroke-width="1.2"/></svg></div>
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:3px;">II</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,9 6,9 8,2 10,16 12,9 22,9 24,2 26,16 28,9 38,9 40,2 42,16 44,9 54,9 56,3 58,15 60,9" fill="none" stroke="#a78bfa" stroke-width="1.2"/></svg></div>
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:rgba(167,139,250,0.5); font-family:monospace; margin-bottom:3px;">V1</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,9 8,9 10,14 12,4 14,9 24,9 26,14 28,4 30,9 40,9 42,14 44,4 46,9 56,9 58,15 60,5" fill="none" stroke="rgba(167,139,250,0.5)" stroke-width="1.2"/></svg></div>
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:rgba(167,139,250,0.5); font-family:monospace; margin-bottom:3px;">V4</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,12 8,12 10,3 12,18 14,12 24,12 26,3 28,18 30,12 40,12 42,3 44,18 46,12 56,12 58,4 60,17" fill="none" stroke="#ff8080" stroke-width="1.3"/></svg></div>
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:rgba(255,128,128,0.7); font-family:monospace; margin-bottom:3px;">V5</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,11 6,11 8,2 10,17 12,11 22,11 24,2 26,17 28,11 38,11 40,2 42,17 44,11 54,11 56,3 58,16 60,11" fill="none" stroke="rgba(255,128,128,0.6)" stroke-width="1.3"/></svg></div>
+                                <div style="background:#0d0b20; padding:6px;"><div style="font-size:7px; color:rgba(167,139,250,0.4); font-family:monospace; margin-bottom:3px;">III</div><svg viewBox="0 0 60 18" style="width:100%;height:14px;" preserveAspectRatio="none"><polyline points="0,9 10,9 12,5 14,13 16,9 26,9 28,5 30,13 32,9 42,9 44,5 46,13 48,9 58,9 60,9" fill="none" stroke="rgba(167,139,250,0.4)" stroke-width="1.2"/></svg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">12-Lead Simultaneous View</div>
+                        <div class="cs-feature-desc">All leads rendered together in a responsive grid. Clinically-flagged leads auto-highlight in red for immediate attention.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: linear-gradient(135deg, #0a071a 0%, #0d0a1a 100%);">
+                        <div style="padding:16px; width:100%;">
+                            <div style="font-size:9px; color:rgba(167,139,250,0.6); font-family:var(--font-body); margin-bottom:10px; letter-spacing:0.08em; text-transform:uppercase;">Algorithm Output</div>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <div style="background:rgba(255,80,80,0.06); border-left:3px solid #ff8080; padding:8px 10px; border-radius:0 6px 6px 0;">
+                                    <div style="font-size:8px; font-weight:700; color:#ff8080; font-family:var(--font-body); margin-bottom:3px;">Inferior STEMI</div>
+                                    <div style="background:rgba(255,255,255,0.06); border-radius:3px; height:3px;"><div style="width:92%; height:100%; background:#ff8080; border-radius:3px;"></div></div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.25); font-family:var(--font-body); margin-top:3px;">92% confidence</div>
+                                </div>
+                                <div style="background:rgba(255,165,0,0.05); border-left:3px solid rgba(255,165,0,0.5); padding:8px 10px; border-radius:0 6px 6px 0;">
+                                    <div style="font-size:8px; font-weight:600; color:rgba(255,165,0,0.8); font-family:var(--font-body); margin-bottom:3px;">Sinus Tachycardia</div>
+                                    <div style="background:rgba(255,255,255,0.06); border-radius:3px; height:3px;"><div style="width:87%; height:100%; background:rgba(255,165,0,0.7); border-radius:3px;"></div></div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.25); font-family:var(--font-body); margin-top:3px;">87% confidence</div>
+                                </div>
+                                <div style="background:rgba(255,255,255,0.03); border-left:3px solid rgba(255,255,255,0.1); padding:8px 10px; border-radius:0 6px 6px 0;">
+                                    <div style="font-size:8px; font-weight:600; color:rgba(255,255,255,0.5); font-family:var(--font-body); margin-bottom:3px;">Normal QRS</div>
+                                    <div style="background:rgba(255,255,255,0.06); border-radius:3px; height:3px;"><div style="width:99%; height:100%; background:rgba(167,139,250,0.5); border-radius:3px;"></div></div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.25); font-family:var(--font-body); margin-top:3px;">99% confidence</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">Algorithm Suggestions</div>
+                        <div class="cs-feature-desc">On-screen algorithmic interpretation with confidence scores. Doctors can accept, flag, or override with one click — all decisions are audit-logged.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: #09071a;">
+                        <div style="padding:16px; width:100%; display:flex; flex-direction:column; height:100%;">
+                            <div style="font-size:9px; color:rgba(167,139,250,0.6); font-family:var(--font-body); margin-bottom:10px; letter-spacing:0.08em; text-transform:uppercase;">Serial Comparison</div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; flex:1;">
+                                <div>
+                                    <div style="font-size:8px; color:rgba(255,255,255,0.35); font-family:var(--font-body); margin-bottom:6px;">Today 14:32</div>
+                                    <div style="background:#0d0b20; border-radius:6px; padding:8px;">
+                                        <div style="font-size:7px; color:#ff8080; font-family:monospace; margin-bottom:3px;">Lead II</div>
+                                        <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,14 10,14 12,2 14,22 16,14 30,14 32,2 34,22 36,14 50,14 52,2 54,22 56,14 70,14 72,3 74,21 76,14 80,14" fill="none" stroke="#ff8080" stroke-width="1.5"/></svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-size:8px; color:rgba(255,255,255,0.35); font-family:var(--font-body); margin-bottom:6px;">3 days ago</div>
+                                    <div style="background:#0d0b20; border-radius:6px; padding:8px;">
+                                        <div style="font-size:7px; color:#a78bfa; font-family:monospace; margin-bottom:3px;">Lead II</div>
+                                        <svg viewBox="0 0 80 22" style="width:100%; height:18px;" preserveAspectRatio="none"><polyline points="0,11 10,11 12,2 14,20 16,11 30,11 32,2 34,20 36,11 50,11 52,2 54,20 56,11 70,11 72,2 74,20 76,11 80,11" fill="none" stroke="#a78bfa" stroke-width="1.5"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="background:rgba(255,80,80,0.05); border:1px solid rgba(255,80,80,0.15); border-radius:6px; padding:8px; margin-top:8px;">
+                                <div style="font-size:8px; color:#ff8080; font-family:var(--font-body);">Δ ST +2.8mm elevation detected in II, III, aVF since last recording</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">Serial ECG Comparison</div>
+                        <div class="cs-feature-desc">Side-by-side comparison of current vs. past ECGs with automatic delta detection. Evolution of ischaemia visible at a glance.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: #09071a;">
+                        <div style="padding:16px; width:100%;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                                <div style="font-size:9px; color:rgba(255,255,255,0.35); font-family:var(--font-body); letter-spacing:0.08em; text-transform:uppercase;">Patient Queue</div>
+                                <div style="font-size:8px; color:#a78bfa; font-family:var(--font-body);">14 patients</div>
+                            </div>
+                            <div style="display:flex; flex-direction:column; gap:6px;">
+                                <div style="display:grid; grid-template-columns:1fr auto auto; gap:8px; padding:8px; background:rgba(167,139,250,0.06); border:1px solid rgba(167,139,250,0.15); border-radius:6px; align-items:center;">
+                                    <div style="font-size:8px; font-weight:600; color:#fff; font-family:var(--font-body);">R. Sharma, 62M</div>
+                                    <div style="font-size:7px; background:rgba(255,80,80,0.2); color:#ff8080; padding:2px 6px; border-radius:4px; font-family:var(--font-body);">P1</div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.3); font-family:var(--font-body);">14:32</div>
+                                </div>
+                                <div style="display:grid; grid-template-columns:1fr auto auto; gap:8px; padding:8px; background:rgba(255,255,255,0.03); border-radius:6px; align-items:center;">
+                                    <div style="font-size:8px; font-weight:600; color:rgba(255,255,255,0.6); font-family:var(--font-body);">A. Nair, 45F</div>
+                                    <div style="font-size:7px; background:rgba(255,165,0,0.15); color:#ffa500; padding:2px 6px; border-radius:4px; font-family:var(--font-body);">P2</div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.3); font-family:var(--font-body);">13:50</div>
+                                </div>
+                                <div style="display:grid; grid-template-columns:1fr auto auto; gap:8px; padding:8px; background:rgba(255,255,255,0.02); border-radius:6px; align-items:center; opacity:0.6;">
+                                    <div style="font-size:8px; font-weight:600; color:rgba(255,255,255,0.5); font-family:var(--font-body);">K. Patel, 58M</div>
+                                    <div style="font-size:7px; background:rgba(40,200,100,0.1); color:#28c864; padding:2px 6px; border-radius:4px; font-family:var(--font-body);">P3</div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.2); font-family:var(--font-body);">13:21</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">Priority Patient Queue</div>
+                        <div class="cs-feature-desc">Triage-sorted patient list keeps the most critical cases visible first. One click to jump directly to any patient's ECG workspace.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcome -->
+        <section class="cs-section">
+            <div class="cs-two-col">
+                <div>
+                    <div class="cs-label">Outcome</div>
+                    <h2 class="cs-title">Built for Scale</h2>
+                    <p class="cs-body">ECG Analysis Terminal reduced diagnosis workflow time by 85% compared to the legacy tool it replaced. 200+ clinicians across the network adopted it within the first two months, with a 99.9% uptime SLA maintained throughout.</p>
+                </div>
+                <div>
+                    <div class="cs-stats" style="grid-template-columns: 1fr 1fr; margin-top: 0;">
+                        <div class="cs-stat"><div class="cs-stat-number">85%</div><div class="cs-stat-label">Faster diagnosis workflow vs. legacy tool</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">200+</div><div class="cs-stat-label">Clinicians adopted in first 2 months</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">99.9%</div><div class="cs-stat-label">Platform uptime SLA</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">4.7</div><div class="cs-stat-label">Average SUS usability score (out of 5)</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="cs-next">
+            <div class="cs-next-label">Next Project</div>
+            <a href="one-mobile.html" class="cs-next-link">
+                One Mobile
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </section>
+    </div>
+
+    <footer class="cs-footer">
+        <span class="cs-footer-copy">© 2025 Vineesh P</span>
+        <a href="index.html" class="cs-footer-logo">vineesh<span class="accent">.</span></a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const csNav = document.getElementById('csNav');
+        window.addEventListener('scroll', () => csNav.classList.toggle('scrolled', window.scrollY > 60));
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Mobile – Case Study | Vineesh P</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Nav -->
+    <nav class="cs-nav" id="csNav">
+        <a href="index.html#work" class="cs-back">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+            Go Back
+        </a>
+        <a href="index.html" class="cs-nav-logo">vineesh<span class="accent">.</span></a>
+        <div class="cs-nav-right">
+            <button class="theme-toggle-cs" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+        <div class="cs-hero-bg" style="background: linear-gradient(135deg, #0d1a0a 0%, #1a1f0d 30%, #2a1f5e 70%, #1a0d3a 100%);"></div>
+        <div class="cs-hero-overlay"></div>
+        <div class="cs-hero-content">
+            <div class="cs-tags">
+                <span class="cs-tag">UX Design</span>
+                <span class="cs-tag">Mobile App</span>
+                <span class="cs-tag">Healthcare</span>
+            </div>
+            <h1 class="cs-hero-title">Atlas<br>Mobile</h1>
+            <p class="cs-hero-desc">An AI-powered mobile app helping cardiologists interpret and diagnose ECGs faster — reducing diagnosis time by 68%.</p>
+        </div>
+    </section>
+
+    <!-- Hero Mockup -->
+    <div class="cs-hero-mockup" style="background: #0d0d12;">
+        <!-- Phone 1 - ECG Queue -->
+        <div class="phone-mockup side-far">
+            <div class="phone-frame">
+                <div class="phone-screen" style="background: #0d0d1a;">
+                    <div class="phone-notch"></div>
+                    <div style="padding: 32px 14px 14px;">
+                        <div style="font-size:9px; color:rgba(208,255,113,0.6); font-family:var(--font-body); margin-bottom:4px; letter-spacing:0.08em; text-transform:uppercase;">ATLAS</div>
+                        <div style="font-size:13px; font-weight:600; color:#fff; font-family:var(--font-body); margin-bottom:14px;">ECG Queue</div>
+                        <div style="display:flex; gap:6px; margin-bottom:12px;">
+                            <div style="padding:4px 10px; background:#d0ff71; border-radius:100px; font-size:8px; font-weight:600; color:#000; font-family:var(--font-body);">All</div>
+                            <div style="padding:4px 10px; border:1px solid rgba(255,255,255,0.15); border-radius:100px; font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Pending</div>
+                            <div style="padding:4px 10px; border:1px solid rgba(255,255,255,0.15); border-radius:100px; font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Urgent</div>
+                        </div>
+                        <!-- Patient rows -->
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div style="background:rgba(255,255,255,0.06); border-radius:10px; padding:10px 10px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                    <div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">R. Sharma, 62M</div>
+                                    <div style="font-size:7px; background:rgba(255,80,80,0.2); color:#ff8080; padding:2px 6px; border-radius:100px; font-family:var(--font-body);">URGENT</div>
+                                </div>
+                                <svg viewBox="0 0 100 20" style="width:100%; height:14px;" preserveAspectRatio="none"><polyline points="0,10 15,10 18,3 21,17 24,10 40,10 43,1 46,19 49,10 65,10 68,4 71,16 74,10 90,10 93,6 96,14 99,10" fill="none" stroke="#d0ff71" stroke-width="1.2"/></svg>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.04); border-radius:10px; padding:10px 10px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                    <div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">A. Nair, 45F</div>
+                                    <div style="font-size:7px; background:rgba(255,165,0,0.15); color:#ffa500; padding:2px 6px; border-radius:100px; font-family:var(--font-body);">REVIEW</div>
+                                </div>
+                                <svg viewBox="0 0 100 20" style="width:100%; height:14px;" preserveAspectRatio="none"><polyline points="0,10 20,10 23,5 26,15 29,10 50,10 53,2 56,18 59,10 75,10 78,7 81,13 84,10 100,10" fill="none" stroke="rgba(208,255,113,0.5)" stroke-width="1.2"/></svg>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.04); border-radius:10px; padding:10px 10px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                    <div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">K. Patel, 58M</div>
+                                    <div style="font-size:7px; background:rgba(40,200,100,0.15); color:#28c864; padding:2px 6px; border-radius:100px; font-family:var(--font-body);">NORMAL</div>
+                                </div>
+                                <svg viewBox="0 0 100 20" style="width:100%; height:14px;" preserveAspectRatio="none"><polyline points="0,10 25,10 27,6 29,14 31,10 55,10 57,4 59,16 61,10 80,10 82,8 84,12 86,10 100,10" fill="none" stroke="rgba(208,255,113,0.35)" stroke-width="1.2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phone 2 (main) - ECG Viewer -->
+        <div class="phone-mockup main">
+            <div class="phone-frame">
+                <div class="phone-screen" style="background: #080810;">
+                    <div class="phone-notch"></div>
+                    <div style="padding: 32px 14px 10px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+                            <div style="font-size:9px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">R. Sharma · 62M</div>
+                        </div>
+                        <!-- ECG Display -->
+                        <div style="background:#0d0d20; border-radius:10px; padding:12px; margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                                <div style="font-size:8px; color:#d0ff71; font-family:var(--font-body); font-weight:600;">Lead II</div>
+                                <div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">25mm/s</div>
+                            </div>
+                            <svg viewBox="0 0 200 50" style="width:100%; height:40px;" preserveAspectRatio="none">
+                                <line x1="0" y1="25" x2="200" y2="25" stroke="rgba(208,255,113,0.08)" stroke-width="0.5"/>
+                                <polyline points="0,25 20,25 25,25 27,5 30,45 33,25 55,25 60,25 62,3 65,47 68,25 90,25 95,25 97,5 100,45 103,25 125,25 130,25 132,3 135,47 138,25 160,25 165,25 167,5 170,45 173,25 195,25 200,25" fill="none" stroke="#d0ff71" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <!-- AI Panel -->
+                        <div style="background:rgba(208,255,113,0.06); border:1px solid rgba(208,255,113,0.2); border-radius:10px; padding:12px; margin-bottom:10px;">
+                            <div style="display:flex; align-items:center; gap:6px; margin-bottom:8px;">
+                                <div style="width:6px; height:6px; background:#d0ff71; border-radius:50%;"></div>
+                                <div style="font-size:8px; color:#d0ff71; font-weight:600; font-family:var(--font-body); letter-spacing:0.08em; text-transform:uppercase;">AI Analysis</div>
+                            </div>
+                            <div style="font-size:9px; color:rgba(255,255,255,0.8); font-family:var(--font-body); line-height:1.5; margin-bottom:6px;">ST-segment elevation in leads II, III, aVF — suggestive of <span style="color:#d0ff71; font-weight:600;">Inferior STEMI</span></div>
+                            <div style="background:rgba(255,255,255,0.06); border-radius:6px; height:4px; overflow:hidden;">
+                                <div style="width:92%; height:100%; background:#d0ff71; border-radius:6px;"></div>
+                            </div>
+                            <div style="font-size:7px; color:rgba(255,255,255,0.35); font-family:var(--font-body); margin-top:4px;">92% confidence</div>
+                        </div>
+                        <!-- Action buttons -->
+                        <div style="display:flex; gap:8px;">
+                            <div style="flex:1; background:#d0ff71; border-radius:8px; padding:8px; text-align:center; font-size:8px; font-weight:700; color:#000; font-family:var(--font-body);">Confirm</div>
+                            <div style="flex:1; background:rgba(255,255,255,0.06); border-radius:8px; padding:8px; text-align:center; font-size:8px; color:rgba(255,255,255,0.6); font-family:var(--font-body);">Override</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phone 3 - Report -->
+        <div class="phone-mockup side">
+            <div class="phone-frame">
+                <div class="phone-screen" style="background: #0a0a14;">
+                    <div class="phone-notch"></div>
+                    <div style="padding: 32px 12px 12px;">
+                        <div style="font-size:10px; font-weight:600; color:#fff; font-family:var(--font-body); margin-bottom:12px;">Interpretation Report</div>
+                        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
+                            <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:8px; display:flex; justify-content:space-between;">
+                                <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body);">Heart Rate</div>
+                                <div style="font-size:8px; font-weight:600; color:#d0ff71; font-family:var(--font-body);">98 bpm</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:8px; display:flex; justify-content:space-between;">
+                                <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body);">PR Interval</div>
+                                <div style="font-size:8px; font-weight:600; color:#fff; font-family:var(--font-body);">164 ms</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:8px; display:flex; justify-content:space-between;">
+                                <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body);">QRS Duration</div>
+                                <div style="font-size:8px; font-weight:600; color:#fff; font-family:var(--font-body);">88 ms</div>
+                            </div>
+                            <div style="background:rgba(255,80,80,0.08); border:1px solid rgba(255,80,80,0.2); border-radius:8px; padding:8px; display:flex; justify-content:space-between;">
+                                <div style="font-size:8px; color:rgba(255,255,255,0.5); font-family:var(--font-body);">ST Deviation</div>
+                                <div style="font-size:8px; font-weight:600; color:#ff8080; font-family:var(--font-body);">+2.8 mm ↑</div>
+                            </div>
+                        </div>
+                        <div style="background:#d0ff71; border-radius:8px; padding:8px; text-align:center; font-size:8px; font-weight:700; color:#000; font-family:var(--font-body);">Send Report</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meta -->
+    <div class="cs-meta">
+        <div class="cs-meta-inner">
+            <div class="cs-meta-item"><span class="cs-meta-label">Role</span><span class="cs-meta-value">UX Designer</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Duration</span><span class="cs-meta-value">3 Months</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Platform</span><span class="cs-meta-value">iOS Mobile App</span></div>
+            <div class="cs-meta-item"><span class="cs-meta-label">Tools</span><span class="cs-meta-value">Figma · Maze · FigJam</span></div>
+        </div>
+    </div>
+
+    <!-- Challenge -->
+    <div class="cs-container">
+        <section class="cs-section">
+            <div class="cs-two-col">
+                <div>
+                    <div class="cs-label">The Challenge</div>
+                    <h2 class="cs-title">15 Minutes Too Many</h2>
+                </div>
+                <div>
+                    <p class="cs-body">Cardiologists in busy hospital settings were spending an average of 15+ minutes manually interpreting a single ECG. In emergency scenarios — STEMI, arrhythmias, life-threatening events — every minute matters. Existing tools were designed for desktop, forcing doctors to move between devices mid-workflow. The goal was to design a mobile-first experience that puts AI-powered interpretation directly in the doctor's hands, at the point of care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="cs-section">
+            <div class="cs-label">Design Process</div>
+            <h2 class="cs-title">How We Got There</h2>
+            <div class="cs-process">
+                <div class="cs-step">
+                    <div class="cs-step-num">01</div>
+                    <div class="cs-step-title">Research</div>
+                    <div class="cs-step-body">Shadowed 8 cardiologists across 3 hospitals. Ran contextual interviews to map their ECG interpretation workflow, pain points, and handoff friction.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">02</div>
+                    <div class="cs-step-title">Define</div>
+                    <div class="cs-step-body">Synthesised findings into a core problem statement and user flows. Prioritised speed, legibility under stress, and one-handed operation.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">03</div>
+                    <div class="cs-step-title">Design</div>
+                    <div class="cs-step-body">Rapid wireframing in FigJam, then high-fidelity prototypes in Figma. Iterated 4 rounds based on doctor feedback on waveform clarity and AI panel placement.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">04</div>
+                    <div class="cs-step-title">Test</div>
+                    <div class="cs-step-body">Moderated usability tests with 12 doctors using Maze. Measured task completion time and error rate on triage scenarios.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="cs-section">
+            <div class="cs-label">Key Features</div>
+            <h2 class="cs-title">The Solution</h2>
+            <div class="cs-features">
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: linear-gradient(135deg, #080810 0%, #0d1520 100%);">
+                        <svg viewBox="0 0 400 180" style="width:100%; height:100%;" preserveAspectRatio="xMidYMid slice">
+                            <line x1="0" y1="90" x2="400" y2="90" stroke="rgba(208,255,113,0.06)" stroke-width="1"/>
+                            <line x1="0" y1="60" x2="400" y2="60" stroke="rgba(208,255,113,0.04)" stroke-width="0.5"/>
+                            <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(208,255,113,0.04)" stroke-width="0.5"/>
+                            <line x1="100" y1="0" x2="100" y2="180" stroke="rgba(208,255,113,0.04)" stroke-width="0.5"/>
+                            <line x1="200" y1="0" x2="200" y2="180" stroke="rgba(208,255,113,0.04)" stroke-width="0.5"/>
+                            <line x1="300" y1="0" x2="300" y2="180" stroke="rgba(208,255,113,0.04)" stroke-width="0.5"/>
+                            <polyline points="0,90 30,90 35,90 40,20 45,160 50,90 80,90 85,90 90,15 95,165 100,90 130,90 135,90 140,20 145,160 150,90 180,90 185,90 190,18 195,162 200,90 230,90 235,90 240,22 245,158 250,90 280,90 285,90 290,20 295,160 300,90 330,90 335,90 340,18 345,162 350,90 380,90 385,90 390,20 395,160 400,90" fill="none" stroke="#d0ff71" stroke-width="2" stroke-linejoin="round"/>
+                            <text x="16" y="20" font-size="11" fill="rgba(208,255,113,0.5)" font-family="monospace">Lead II</text>
+                            <text x="340" y="20" font-size="10" fill="rgba(255,255,255,0.25)" font-family="monospace">25mm/s</text>
+                        </svg>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">ECG Waveform Viewer</div>
+                        <div class="cs-feature-desc">Multi-lead ECG viewer with pinch-to-zoom, lead switching, and real-time rendering. Grid overlay ensures clinical accuracy.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: linear-gradient(135deg, #0a1008 0%, #0d1a0d 100%);">
+                        <div style="padding: 20px; width: 100%;">
+                            <div style="background:rgba(208,255,113,0.08); border:1px solid rgba(208,255,113,0.2); border-radius:12px; padding:16px; margin-bottom:10px;">
+                                <div style="font-size:10px; color:#d0ff71; font-weight:700; font-family:var(--font-body); margin-bottom:10px; letter-spacing:0.06em;">AI INTERPRETATION</div>
+                                <div style="display:flex; flex-direction:column; gap:6px;">
+                                    <div style="display:flex; align-items:center; gap:8px;"><div style="width:6px; height:6px; background:#ff8080; border-radius:50%; flex-shrink:0;"></div><div style="font-size:9px; color:rgba(255,255,255,0.7); font-family:var(--font-body);">Inferior ST elevation (II, III, aVF)</div></div>
+                                    <div style="display:flex; align-items:center; gap:8px;"><div style="width:6px; height:6px; background:#ffa500; border-radius:50%; flex-shrink:0;"></div><div style="font-size:9px; color:rgba(255,255,255,0.7); font-family:var(--font-body);">Sinus tachycardia (98 bpm)</div></div>
+                                    <div style="display:flex; align-items:center; gap:8px;"><div style="width:6px; height:6px; background:#d0ff71; border-radius:50%; flex-shrink:0;"></div><div style="font-size:9px; color:rgba(255,255,255,0.7); font-family:var(--font-body);">Normal QRS morphology</div></div>
+                                </div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.04); border-radius:8px; padding:10px; display:flex; justify-content:space-between; align-items:center;">
+                                <div style="font-size:9px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Confidence score</div>
+                                <div style="font-size:11px; font-weight:700; color:#d0ff71; font-family:var(--font-body);">92%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">AI Interpretation Panel</div>
+                        <div class="cs-feature-desc">Contextual AI suggestions surface automatically alongside the waveform, with confidence scores doctors can accept or override.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: linear-gradient(135deg, #0d0d1a 0%, #0a0a12 100%);">
+                        <div style="padding: 20px; width: 100%;">
+                            <div style="font-size:10px; color:rgba(255,255,255,0.5); font-family:var(--font-body); margin-bottom:14px;">Patient History</div>
+                            <div style="display:flex; flex-direction:column; gap:0;">
+                                <div style="display:flex; gap:12px; align-items:flex-start; padding-bottom:14px; border-left:1px solid rgba(208,255,113,0.3); margin-left:5px; padding-left:16px; position:relative;">
+                                    <div style="width:10px; height:10px; background:#d0ff71; border-radius:50%; position:absolute; left:-5px; top:0;"></div>
+                                    <div><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">Today, 14:32</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Inferior STEMI · AI flagged</div></div>
+                                </div>
+                                <div style="display:flex; gap:12px; align-items:flex-start; padding-bottom:14px; border-left:1px solid rgba(255,255,255,0.1); margin-left:5px; padding-left:16px; position:relative;">
+                                    <div style="width:10px; height:10px; background:rgba(255,255,255,0.2); border-radius:50%; position:absolute; left:-5px; top:0;"></div>
+                                    <div><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">3 days ago</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Sinus rhythm · Normal</div></div>
+                                </div>
+                                <div style="display:flex; gap:12px; align-items:flex-start; border-left:1px solid rgba(255,255,255,0.05); margin-left:5px; padding-left:16px; position:relative;">
+                                    <div style="width:10px; height:10px; background:rgba(255,255,255,0.1); border-radius:50%; position:absolute; left:-5px; top:0;"></div>
+                                    <div><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">2 weeks ago</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">Baseline ECG</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">Patient Timeline</div>
+                        <div class="cs-feature-desc">Chronological ECG history lets doctors compare current readings with past baselines to spot evolving changes at a glance.</div>
+                    </div>
+                </div>
+                <div class="cs-feature">
+                    <div class="cs-feature-screen" style="background: linear-gradient(135deg, #1a0808 0%, #120505 100%);">
+                        <div style="padding: 20px; width: 100%;">
+                            <div style="font-size:10px; color:rgba(255,255,255,0.5); font-family:var(--font-body); margin-bottom:12px;">Alert Queue</div>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <div style="background:rgba(255,80,80,0.1); border:1px solid rgba(255,80,80,0.25); border-radius:10px; padding:10px; display:flex; align-items:center; gap:10px;">
+                                    <div style="width:8px; height:8px; background:#ff5050; border-radius:50%; flex-shrink:0; box-shadow:0 0 6px #ff5050;"></div>
+                                    <div style="flex:1;"><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">R. Sharma — STEMI</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">2 min ago · ICU Bed 3</div></div>
+                                    <div style="font-size:7px; color:#ff8080; font-family:var(--font-body); font-weight:600;">P1</div>
+                                </div>
+                                <div style="background:rgba(255,165,0,0.08); border:1px solid rgba(255,165,0,0.2); border-radius:10px; padding:10px; display:flex; align-items:center; gap:10px;">
+                                    <div style="width:8px; height:8px; background:#ffa500; border-radius:50%; flex-shrink:0;"></div>
+                                    <div style="flex:1;"><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">P. Menon — AFib</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">18 min ago · Ward B</div></div>
+                                    <div style="font-size:7px; color:#ffa500; font-family:var(--font-body); font-weight:600;">P2</div>
+                                </div>
+                                <div style="background:rgba(255,255,255,0.04); border-radius:10px; padding:10px; display:flex; align-items:center; gap:10px;">
+                                    <div style="width:8px; height:8px; background:rgba(255,255,255,0.2); border-radius:50%; flex-shrink:0;"></div>
+                                    <div style="flex:1;"><div style="font-size:9px; font-weight:600; color:#fff; font-family:var(--font-body);">S. Verma — Review</div><div style="font-size:8px; color:rgba(255,255,255,0.4); font-family:var(--font-body);">45 min ago · OPD</div></div>
+                                    <div style="font-size:7px; color:rgba(255,255,255,0.3); font-family:var(--font-body); font-weight:600;">P3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-feature-body">
+                        <div class="cs-feature-title">Alert Triage System</div>
+                        <div class="cs-feature-desc">Priority-based alert queue ensures critical cases surface first. Push notifications reach doctors instantly regardless of app state.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcome -->
+        <section class="cs-section">
+            <div class="cs-two-col">
+                <div>
+                    <div class="cs-label">Outcome</div>
+                    <h2 class="cs-title">Measurable Impact</h2>
+                    <p class="cs-body">Atlas Mobile was piloted across 12 hospitals, used by 80+ cardiologists within the first quarter. The AI-assisted workflow reduced interpretation time significantly while maintaining diagnostic accuracy.</p>
+                </div>
+                <div>
+                    <div class="cs-stats" style="grid-template-columns: 1fr 1fr; margin-top: 0;">
+                        <div class="cs-stat"><div class="cs-stat-number">68%</div><div class="cs-stat-label">Reduction in ECG interpretation time</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">91%</div><div class="cs-stat-label">User satisfaction score from doctors</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">12</div><div class="cs-stat-label">Hospitals in pilot deployment</div></div>
+                        <div class="cs-stat"><div class="cs-stat-number">80+</div><div class="cs-stat-label">Active cardiologists using the app</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next -->
+        <section class="cs-next">
+            <div class="cs-next-label">Next Project</div>
+            <a href="vcardia.html" class="cs-next-link">
+                VCardia
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </section>
+    </div>
+
+    <footer class="cs-footer">
+        <span class="cs-footer-copy">© 2025 Vineesh P</span>
+        <a href="index.html" class="cs-footer-logo">vineesh<span class="accent">.</span></a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const csNav = document.getElementById('csNav');
+        window.addEventListener('scroll', () => csNav.classList.toggle('scrolled', window.scrollY > 60));
+    </script>
+</body>
+</html>
