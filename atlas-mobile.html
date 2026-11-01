@@ -96,6 +96,119 @@
             </div>
         </div>
 
+        <!-- Approach -->
+        <div class="cs-section">
+            <span class="cs-section-label">My Approach</span>
+            <h2>How I Approached It</h2>
+            <p>I treated the phone as a point-of-care instrument, not a smaller desktop. Every decision started from the moment a cardiologist has to act on an ECG and worked backwards from there.</p>
+            <p>The AI was designed as a second opinion the doctor stays in control of. It never acts as a black box: findings are explained, editable and always secondary to clinical judgement.</p>
+        </div>
+
+        <!-- Vision -->
+        <div class="cs-section">
+            <span class="cs-section-label">Vision &amp; Innovation</span>
+            <h2>The Vision</h2>
+            <p>Move ECG interpretation off the desktop and into the cardiologist's pocket. The goal was AI-assisted reads at the bedside, in the corridor or on call, so that critical cases like STEMI reach a decision in minutes instead of waiting for a free workstation.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="cs-section">
+            <span class="cs-section-label">Identifying Unique Challenges</span>
+            <h2>What Made It Hard</h2>
+            <ul class="cs-list">
+                <li><strong>Dense data, small screen</strong>: A 12-lead ECG carries a lot of detail. It had to stay readable and comparable on a phone without endless zooming.</li>
+                <li><strong>Trust in AI</strong>: Doctors won't act on a suggestion they can't verify. The interface had to show why the AI reached a finding, not just what it found.</li>
+                <li><strong>Stress and one-handed use</strong>: Emergencies leave one hand free at best, so core actions had to work with a thumb, quickly and without mistakes.</li>
+                <li><strong>Urgent vs routine</strong>: Life-threatening ECGs must stand out immediately from the routine queue.</li>
+            </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="cs-section">
+            <span class="cs-section-label">Resolving Complex Problems</span>
+            <h2>Design Solutions</h2>
+            <div class="cs-challenge-card">
+                <h3>Lead-focused waveform viewer</h3>
+                <p>A clean lead-switching pattern lets doctors move between leads and focus on one without losing context. This removed the biggest bottleneck found in research.</p>
+                <div class="cs-challenge-result">Designed around the lead-switching bottleneck identified while shadowing 8 cardiologists.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Transparent AI panel</h3>
+                <p>AI findings appear alongside the waveform they refer to, so doctors can verify, accept or edit each suggestion. Placement was refined over 4 rounds of doctor feedback.</p>
+                <div class="cs-challenge-result">AI trust signals tested and iterated across 4 design rounds.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Criticality-first triage</h3>
+                <p>Critical findings rise to the top of the list with clear visual and text labels, so urgent cases never hide in a routine queue.</p>
+                <div class="cs-challenge-result">Triage scenarios used to benchmark against the previous desktop tool.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Thumb-zone actions</h3>
+                <p>Primary actions sit within easy thumb reach, so a full read-and-report can be completed one-handed.</p>
+                <div class="cs-challenge-result">One-handed operation defined as a non-negotiable from day one.</div>
+            </div>
+        </div>
+
+        <!-- User-Centric Design -->
+        <div class="cs-section">
+            <span class="cs-section-label">User-Centric Design</span>
+            <h2>Designed With Users</h2>
+            <p>Cardiologists shaped the product at every stage, from contextual interviews and shadowing to moderated usability tests. Waveform clarity, typography and AI panel placement were all decided by watching real doctors use the prototype rather than by assumption.</p>
+        </div>
+
+        <!-- Needs -->
+        <div class="cs-section">
+            <span class="cs-section-label">Meeting User &amp; Business Needs</span>
+            <h2>Balancing Both Sides</h2>
+            <div class="cs-needs-grid">
+                <div class="cs-needs-card">
+                    <h3>User Needs</h3>
+                    <ul class="cs-list">
+                    <li>Interpret ECGs fast, anywhere</li>
+                    <li>Clear, verifiable AI suggestions</li>
+                    <li>Spot critical cases instantly</li>
+                    <li>Work one-handed under pressure</li>
+                    </ul>
+                </div>
+                <div class="cs-needs-card">
+                    <h3>Business Needs</h3>
+                    <ul class="cs-list">
+                    <li>Reduce diagnosis turnaround time</li>
+                    <li>Drive adoption across pilot hospitals</li>
+                    <li>Build clinician trust in Tricog's AI</li>
+                    <li>A mobile product that scales across networks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="cs-section">
+            <span class="cs-section-label">Detailed Pages &amp; Features</span>
+            <h2>Key Features</h2>
+            <div class="cs-feature-grid">
+                <div class="cs-feature-item">
+                    <h3>ECG Viewer</h3>
+                    <p>Legible 12-lead waveforms with quick lead switching and focus mode.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>AI Interpretation</h3>
+                    <p>Explained findings doctors can verify, accept or edit.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Triage Queue</h3>
+                    <p>Cases sorted by criticality so emergencies surface first.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Report Flow</h3>
+                    <p>Review, finalise and sign off a report from the phone.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Process -->
         <div class="cs-section">
             <span class="cs-section-label">Design Process</span>
@@ -124,6 +237,18 @@
                 <p>Moderated usability tests with 12 doctors using Maze. Measured task completion time and error rate on triage scenarios against the previous desktop tool.</p>
                 <div class="cs-challenge-result">68% reduction in average interpretation time. 91% satisfaction score across tested users.</div>
             </div>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="cs-section">
+            <span class="cs-section-label">Accessibility &amp; Optimisation</span>
+            <h2>Built for Everyone</h2>
+            <ul class="cs-list">
+                <li><strong>Legibility first</strong>: high-contrast waveform grids and type sized for quick reading under stress.</li>
+                <li><strong>Not colour alone</strong>: criticality is shown with colour plus a text label, so it reads for colour-blind users too.</li>
+                <li><strong>Platform conventions</strong>: built on iOS Human Interface Guidelines for familiar gestures, touch targets and Dynamic Type support.</li>
+                <li><strong>Optimised flows</strong>: fewer taps from opening a case to signing off a report.</li>
+            </ul>
         </div>
 
         <!-- Impact -->
@@ -166,13 +291,30 @@
             </div>
         </div>
 
-        <!-- Next project -->
-        <div class="cs-next-project">
-            <span class="cs-next-label-sm">Next Project</span>
-            <a href="vcardia.html" class="cs-next-link">
-                VCardia
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
+        <!-- Conclusion -->
+        <div class="cs-section">
+            <span class="cs-section-label">Conclusion</span>
+            <h2>The Result</h2>
+            <p>Atlas Mobile turned ECG interpretation into a fast, trustworthy, mobile-first workflow. Pairing transparent AI with a stress-tested interface cut interpretation time by 68% in testing and earned a 91% satisfaction score, giving cardiologists a tool they actually reach for at the point of care.</p>
+        </div>
+
+        <!-- Other projects -->
+        <div class="cs-other-projects">
+            <span class="cs-section-label">Other Projects</span>
+            <div class="cs-other-grid">
+                <a href="vcardia.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile + SDK · Hardware</span>
+                    <span class="cs-other-name">VCardia Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="ecg-terminal.html" class="cs-other-card">
+                    <span class="cs-other-type">Web Platform · Clinical Tool</span>
+                    <span class="cs-other-name">ECG Terminal <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="one-mobile.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile App · Healthcare System</span>
+                    <span class="cs-other-name">One Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+            </div>
         </div>
 
     </div>

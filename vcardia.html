@@ -96,6 +96,123 @@
             </div>
         </div>
 
+        <!-- Approach -->
+        <div class="cs-section">
+            <span class="cs-section-label">My Approach</span>
+            <h2>How I Approached It</h2>
+            <p>I designed for failure first. Before the happy path, I mapped what happens when the battery is low, the signal is noisy or the network drops, so the app stays calm and helpful when hardware misbehaves.</p>
+            <p>VCardia also had two audiences: clinicians using the app and developers integrating the SDK. I designed both experiences side by side so they shared the same mental model.</p>
+        </div>
+
+        <!-- Vision -->
+        <div class="cs-section">
+            <span class="cs-section-label">Vision &amp; Innovation</span>
+            <h2>The Vision</h2>
+            <p>Make recording a clinical-grade 12-lead ECG as simple as pairing a pair of earbuds. Recordings sync to the cloud reliably and reports come back instantly, while the SDK lets partners build the same experience into their own products.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="cs-section">
+            <span class="cs-section-label">Identifying Unique Challenges</span>
+            <h2>What Made It Hard</h2>
+            <ul class="cs-list">
+                <li><strong>Bluetooth pairing</strong>: Pairing was the most common failure point. Users had no idea what state the device was in or what to do next.</li>
+                <li><strong>Signal quality feedback</strong>: Technicians couldn't tell whether a recording was good until it was too late to retake it.</li>
+                <li><strong>Upload confidence</strong>: Without clear confirmation, users didn't know if a recording had reached the cloud, which risked lost data.</li>
+                <li><strong>Two audiences</strong>: The consumer UI had to feel effortless while the SDK exposed a clean, predictable interface for third parties.</li>
+            </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="cs-section">
+            <span class="cs-section-label">Resolving Complex Problems</span>
+            <h2>Design Solutions</h2>
+            <div class="cs-challenge-card">
+                <h3>Guided pairing with live states</h3>
+                <p>Step-by-step pairing with animated status, prototyped in Principle, shows exactly what the device is doing and what to do next.</p>
+                <div class="cs-challenge-result">Zero re-pairing required between sessions after the redesign.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Real-time signal feedback</h3>
+                <p>Live signal-quality cues during acquisition let technicians fix electrode issues before the recording finishes.</p>
+                <div class="cs-challenge-result">Designed from 12 mapped failure scenarios across device states.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Clear sync and upload status</h3>
+                <p>Every recording shows an explicit status, from captured to uploading to synced to report ready, so nothing gets lost silently.</p>
+                <div class="cs-challenge-result">Zero data-loss incidents after launch.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Developer-friendly SDK</h3>
+                <p>SDK documentation and flows were designed alongside the app, giving partners a consistent, well-documented integration path.</p>
+                <div class="cs-challenge-result">3 SDK partners integrated in the first year.</div>
+            </div>
+        </div>
+
+        <!-- User-Centric Design -->
+        <div class="cs-section">
+            <span class="cs-section-label">User-Centric Design</span>
+            <h2>Designed With Users</h2>
+            <p>Nurses and technicians tested the product with the real device in hand across 3 usability rounds. Measuring the full journey from unboxing to the first successful recording kept the design focused on what mattered most: getting a good ECG quickly.</p>
+        </div>
+
+        <!-- Needs -->
+        <div class="cs-section">
+            <span class="cs-section-label">Meeting User &amp; Business Needs</span>
+            <h2>Balancing Both Sides</h2>
+            <div class="cs-needs-grid">
+                <div class="cs-needs-card">
+                    <h3>User Needs</h3>
+                    <ul class="cs-list">
+                    <li>Set up the device in minutes</li>
+                    <li>Know a recording is good</li>
+                    <li>Never lose patient data</li>
+                    <li>Get reports back fast</li>
+                    </ul>
+                </div>
+                <div class="cs-needs-card">
+                    <h3>Business Needs</h3>
+                    <ul class="cs-list">
+                    <li>Faster onboarding for device customers</li>
+                    <li>Fewer support issues from pairing</li>
+                    <li>Partner integrations through the SDK</li>
+                    <li>A dependable, clinical-grade reputation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="cs-section">
+            <span class="cs-section-label">Detailed Pages &amp; Features</span>
+            <h2>Key Features</h2>
+            <div class="cs-feature-grid">
+                <div class="cs-feature-item">
+                    <h3>Device Pairing</h3>
+                    <p>Guided Bluetooth pairing with clear, animated device states.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Live Acquisition</h3>
+                    <p>Real-time 12-lead recording with signal-quality feedback.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Cloud Sync</h3>
+                    <p>Reliable upload with explicit status for every recording.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Instant Reports</h3>
+                    <p>Retrieve interpreted reports directly in the app.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Partner SDK</h3>
+                    <p>Documented SDK so third parties can embed the full flow.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Process -->
         <div class="cs-section">
             <span class="cs-section-label">Design Process</span>
@@ -124,6 +241,18 @@
                 <p>Ran 3 rounds of device-in-hand usability testing with nurses and technicians. Measured setup time from unbox to first successful recording.</p>
                 <div class="cs-challenge-result">Setup time reduced from 40 minutes to under 10. Zero re-pairing required between sessions post-redesign.</div>
             </div>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="cs-section">
+            <span class="cs-section-label">Accessibility &amp; Optimisation</span>
+            <h2>Built for Everyone</h2>
+            <ul class="cs-list">
+                <li><strong>Status in words</strong>: device, signal and upload states always pair colour with text and icons.</li>
+                <li><strong>Error-state design</strong>: every failure scenario has a clear recovery message instead of a dead end.</li>
+                <li><strong>Cross-platform consistency</strong>: matching patterns on iOS and Android reduce retraining across teams.</li>
+                <li><strong>Optimised setup</strong>: setup time dropped from about 40 minutes to under 10.</li>
+            </ul>
         </div>
 
         <!-- Impact -->
@@ -166,13 +295,30 @@
             </div>
         </div>
 
-        <!-- Next project -->
-        <div class="cs-next-project">
-            <span class="cs-next-label-sm">Next Project</span>
-            <a href="ecg-terminal.html" class="cs-next-link">
-                ECG Terminal
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
+        <!-- Conclusion -->
+        <div class="cs-section">
+            <span class="cs-section-label">Conclusion</span>
+            <h2>The Result</h2>
+            <p>VCardia made portable 12-lead ECG feel as approachable as a consumer app without compromising clinical reliability. Designing for failure first delivered 40% faster setup, a 4.8 store rating and zero data loss, while the SDK opened the platform to partners.</p>
+        </div>
+
+        <!-- Other projects -->
+        <div class="cs-other-projects">
+            <span class="cs-section-label">Other Projects</span>
+            <div class="cs-other-grid">
+                <a href="atlas-mobile.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile App · Healthcare</span>
+                    <span class="cs-other-name">Atlas Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="ecg-terminal.html" class="cs-other-card">
+                    <span class="cs-other-type">Web Platform · Clinical Tool</span>
+                    <span class="cs-other-name">ECG Terminal <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="one-mobile.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile App · Healthcare System</span>
+                    <span class="cs-other-name">One Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+            </div>
         </div>
 
     </div>

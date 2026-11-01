@@ -96,6 +96,123 @@
             </div>
         </div>
 
+        <!-- Approach -->
+        <div class="cs-section">
+            <span class="cs-section-label">My Approach</span>
+            <h2>How I Approached It</h2>
+            <p>I started by finding where diagnosis time actually went. Research showed most of it was lost switching between panels rather than on interpretation, so the strategy became: keep everything a doctor needs in one view.</p>
+            <p>Information architecture came before any UI. The panel layout was validated with doctors through card sorting so the workspace matched how they already think.</p>
+        </div>
+
+        <!-- Vision -->
+        <div class="cs-section">
+            <span class="cs-section-label">Vision &amp; Innovation</span>
+            <h2>The Vision</h2>
+            <p>A single, distraction-free clinical workspace where doctors can read multiple leads, compare against past ECGs and act on AI suggestions without losing their train of thought. The aim was diagnosis in seconds, not minutes.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="cs-section">
+            <span class="cs-section-label">Identifying Unique Challenges</span>
+            <h2>What Made It Hard</h2>
+            <ul class="cs-list">
+                <li><strong>Buried information</strong>: Key data sat behind menus, forcing constant navigation during a read.</li>
+                <li><strong>Context switching</strong>: Most diagnosis time was lost moving between tool panels rather than interpreting.</li>
+                <li><strong>Serial comparison</strong>: Comparing a current ECG with previous ones was nearly impossible in existing tools.</li>
+                <li><strong>Clinical environments</strong>: Screens are read at a distance, under hospital lighting, over long shifts.</li>
+            </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="cs-section">
+            <span class="cs-section-label">Resolving Complex Problems</span>
+            <h2>Design Solutions</h2>
+            <div class="cs-challenge-card">
+                <h3>3-panel workspace</h3>
+                <p>Queue, viewer and analysis live side by side, so doctors never leave the read to find information.</p>
+                <div class="cs-challenge-result">Layout validated with 8 doctors in card sorting, with no confusion on spatial layout.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Inline AI suggestions</h3>
+                <p>Algorithmic suggestions appear in the analysis panel next to the waveform, ready to accept or adjust.</p>
+                <div class="cs-challenge-result">Contributed to an 85% faster diagnosis workflow than the legacy tool.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Side-by-side serial comparison</h3>
+                <p>Current and previous ECGs can be compared directly. The entry point was repositioned using Hotjar heatmaps.</p>
+                <div class="cs-challenge-result">Serial comparison click-through improved from 12% to 68%.</div>
+            </div>
+
+            <div class="cs-challenge-card">
+                <h3>Distance-tested type scale</h3>
+                <p>Typography tuned for clinical monitors viewed from 60 to 90 cm in day and night brightness.</p>
+                <div class="cs-challenge-result">Passed legibility tests at 90 cm on standard hospital monitors.</div>
+            </div>
+        </div>
+
+        <!-- User-Centric Design -->
+        <div class="cs-section">
+            <span class="cs-section-label">User-Centric Design</span>
+            <h2>Designed With Users</h2>
+            <p>Cardiologists were involved throughout, through a 3-week diary study, card sorting and beta testing with session recordings. Real behaviour, like doctors missing the serial comparison button, drove the design changes instead of opinions in a meeting room.</p>
+        </div>
+
+        <!-- Needs -->
+        <div class="cs-section">
+            <span class="cs-section-label">Meeting User &amp; Business Needs</span>
+            <h2>Balancing Both Sides</h2>
+            <div class="cs-needs-grid">
+                <div class="cs-needs-card">
+                    <h3>User Needs</h3>
+                    <ul class="cs-list">
+                    <li>See all key information at once</li>
+                    <li>Trustworthy AI suggestions</li>
+                    <li>Easy comparison with past ECGs</li>
+                    <li>Comfortable reading over long shifts</li>
+                    </ul>
+                </div>
+                <div class="cs-needs-card">
+                    <h3>Business Needs</h3>
+                    <ul class="cs-list">
+                    <li>Faster turnaround across hospital networks</li>
+                    <li>Strong clinician adoption</li>
+                    <li>Showcase the value of Tricog's algorithms</li>
+                    <li>A reliable, always-available platform</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="cs-section">
+            <span class="cs-section-label">Detailed Pages &amp; Features</span>
+            <h2>Key Features</h2>
+            <div class="cs-feature-grid">
+                <div class="cs-feature-item">
+                    <h3>Case Queue</h3>
+                    <p>Incoming ECGs organised for fast, sequential reading.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Multi-lead Viewer</h3>
+                    <p>Interpret multiple leads at once in a clean canvas.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>AI Suggestions</h3>
+                    <p>Algorithmic findings shown in context, ready to act on.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Serial Comparison</h3>
+                    <p>Current and past ECGs side by side.</p>
+                </div>
+                <div class="cs-feature-item">
+                    <h3>Analysis & Reporting</h3>
+                    <p>Record the diagnosis without leaving the workspace.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Process -->
         <div class="cs-section">
             <span class="cs-section-label">Design Process</span>
@@ -124,6 +241,18 @@
                 <p>Deployed Hotjar recordings on beta. Identified heat patterns showing doctors weren't seeing the serial comparison CTA — repositioned and retested until click-through reached target.</p>
                 <div class="cs-challenge-result">Serial comparison CTA click-through improved from 12% to 68% after two repositioning iterations.</div>
             </div>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="cs-section">
+            <span class="cs-section-label">Accessibility &amp; Optimisation</span>
+            <h2>Built for Everyone</h2>
+            <ul class="cs-list">
+                <li><strong>Readable at distance</strong>: type scale tested at 90 cm on standard hospital monitors.</li>
+                <li><strong>Lighting tested</strong>: verified under real hospital ambient light at both day and night brightness.</li>
+                <li><strong>Clear hierarchy</strong>: critical information surfaced first, with fewer clicks to reach it.</li>
+                <li><strong>Data-driven optimisation</strong>: Hotjar heatmaps used to find and fix overlooked interactions.</li>
+            </ul>
         </div>
 
         <!-- Impact -->
@@ -167,13 +296,30 @@
             </div>
         </div>
 
-        <!-- Next project -->
-        <div class="cs-next-project">
-            <span class="cs-next-label-sm">Next Project</span>
-            <a href="one-mobile.html" class="cs-next-link">
-                One Mobile
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
+        <!-- Conclusion -->
+        <div class="cs-section">
+            <span class="cs-section-label">Conclusion</span>
+            <h2>The Result</h2>
+            <p>The ECG Analysis Terminal replaced a fragmented toolset with one focused workspace. The result was an 85% faster diagnosis workflow, 200+ clinicians adopting it within two months and a 4.7 SUS score, showing that good information architecture is a clinical advantage.</p>
+        </div>
+
+        <!-- Other projects -->
+        <div class="cs-other-projects">
+            <span class="cs-section-label">Other Projects</span>
+            <div class="cs-other-grid">
+                <a href="atlas-mobile.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile App · Healthcare</span>
+                    <span class="cs-other-name">Atlas Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="vcardia.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile + SDK · Hardware</span>
+                    <span class="cs-other-name">VCardia Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+                <a href="one-mobile.html" class="cs-other-card">
+                    <span class="cs-other-type">Mobile App · Healthcare System</span>
+                    <span class="cs-other-name">One Mobile <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+                </a>
+            </div>
         </div>
 
     </div>
