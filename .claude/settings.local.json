@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(open /Users/vineesh/potfolio_website/index.html)"
+      "Bash(open /Users/vineesh/potfolio_website/index.html)",
+      "WebFetch(domain:sajinmdas.com)"
     ]
   }
 }
